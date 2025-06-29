@@ -1,0 +1,835 @@
+[
+  {
+    "uri": "features/scenarios/keranjang/cart.feature",
+    "id": "cart-pos-jt",
+    "keyword": "Feature",
+    "name": "Cart POS JT",
+    "description": "",
+    "line": 2,
+    "tags": [
+      {
+        "name": "@desktop",
+        "line": 1
+      },
+      {
+        "name": "@keranjang",
+        "line": 1
+      },
+      {
+        "name": "@pos",
+        "line": 1
+      },
+      {
+        "name": "@dev",
+        "line": 1
+      }
+    ],
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 4,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22000
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6186000000
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "User access POS JT",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1024494000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "User validate POS JT login page",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 256455000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User input email with data \"supervisor\"",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2191216000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User input password with data \"supervisor\"",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2098343000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User click log in button",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1254990000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "User verify successfully login to POS JT",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 965836000
+            }
+          }
+        ]
+      },
+      {
+        "id": "cart-pos-jt;verify-sa-successfully-checkout-with-non-member-at-pos-jt",
+        "keyword": "Scenario",
+        "name": "Verify SA successfully checkout with non member at POS JT",
+        "description": "",
+        "line": 14,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@desktop",
+            "line": 1
+          },
+          {
+            "name": "@keranjang",
+            "line": 1
+          },
+          {
+            "name": "@pos",
+            "line": 1
+          },
+          {
+            "name": "@dev",
+            "line": 1
+          },
+          {
+            "name": "@pos.cart",
+            "line": 13
+          },
+          {
+            "name": "@nonmember",
+            "line": 13
+          },
+          {
+            "name": "@dev",
+            "line": 13
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "User select PIC",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 600991000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "user choose PIC \"PIC_DEV\"",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 256668000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User search SKU \"SKU_DEV\"",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4216895000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User set toggle non member",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1288966000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User Lanjutkan chcekout",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2492349000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User input nama non member \"NAMA_NON_MEMBER\"",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1148811000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User input no hp non member \"NO_HP_NON_MEMBER\"",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1267907000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User input email non member \"EMAIL_NON_MEMBER\"",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1126464000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "User click Lanjutkan checkout as non member",
+            "line": 23,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6457249000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "User validate non member on checkout page",
+            "line": 24,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38395000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 615832000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 4,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44000
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2919061000
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "User access POS JT",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 870980000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "User validate POS JT login page",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 221717000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User input email with data \"supervisor\"",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2175959000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User input password with data \"supervisor\"",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2088320000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User click log in button",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1256614000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "User verify successfully login to POS JT",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 862224000
+            }
+          }
+        ]
+      },
+      {
+        "id": "cart-pos-jt;non-member-with-empty-and-invalid-input",
+        "keyword": "Scenario",
+        "name": "non member with empty and invalid input",
+        "description": "",
+        "line": 27,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@desktop",
+            "line": 1
+          },
+          {
+            "name": "@keranjang",
+            "line": 1
+          },
+          {
+            "name": "@pos",
+            "line": 1
+          },
+          {
+            "name": "@dev",
+            "line": 1
+          },
+          {
+            "name": "@pos.cart",
+            "line": 26
+          },
+          {
+            "name": "@nonmember",
+            "line": 26
+          },
+          {
+            "name": "@validateError",
+            "line": 26
+          },
+          {
+            "name": "@dev",
+            "line": 26
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "User select PIC",
+            "line": 28,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 717146000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "user choose PIC \"PIC_DEV\"",
+            "line": 29,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 277310000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User search SKU \"SKU_DEV\"",
+            "line": 30,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4348690000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User set toggle non member",
+            "line": 31,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1484815000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User Lanjutkan chcekout",
+            "line": 32,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2307351000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User delete \"NAMA_NON_MEMBER\" on Nama field",
+            "line": 33,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2406429000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User delete \"NO_HP_NON_MEMBER\" on No hp field",
+            "line": 34,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2500473000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User input \"EMAIL_NON_MEMBER\" invalid email",
+            "line": 35,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 389342000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "user will see an error message showing",
+            "line": 36,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2067874000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 631623000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 4,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35000
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2892356000
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "User access POS JT",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1351071000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "User validate POS JT login page",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 197370000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User input email with data \"supervisor\"",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2151421000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User input password with data \"supervisor\"",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2104186000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "User click log in button",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1404011000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "User verify successfully login to POS JT",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/desktop/login_step.rb:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2170023000
+            }
+          }
+        ]
+      },
+      {
+        "id": "cart-pos-jt;sa-successfully-search-member-at-pos-jt",
+        "keyword": "Scenario",
+        "name": "SA successfully search member at POS JT",
+        "description": "",
+        "line": 39,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@desktop",
+            "line": 1
+          },
+          {
+            "name": "@keranjang",
+            "line": 1
+          },
+          {
+            "name": "@pos",
+            "line": 1
+          },
+          {
+            "name": "@dev",
+            "line": 1
+          },
+          {
+            "name": "@pos.cart",
+            "line": 38
+          },
+          {
+            "name": "@member",
+            "line": 38
+          },
+          {
+            "name": "@dev",
+            "line": 38
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "User select PIC",
+            "line": 40,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 500396000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "user choose PIC \"PIC_DEV\"",
+            "line": 41,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 294525000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "user input data member \"MEMBER_DEV\"",
+            "line": 42,
+            "match": {
+              "location": "features/step_definitions/desktop/cart_step.rb:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5242842000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 631603000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

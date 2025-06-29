@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+ruby '2.7.8'
+
+gem 'google-style'
+gem 'reek'
+gem 'rubocop', '~> 1.48'
+gem 'rubocop-minitest', '~> 0.29.0'
+gem 'rubocop-performance', '~> 1.16'
+gem 'rubocop-rails', '~> 2.18'
+gem 'rubocop-rspec', '~> 2.19'

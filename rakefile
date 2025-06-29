@@ -1,0 +1,5 @@
+require_relative 'features/helper/job/parallel_runner'
+
+task :parallel_run do
+  ParallelRunnerHelper.run_parallel_tests
+end

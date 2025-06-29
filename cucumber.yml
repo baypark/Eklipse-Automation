@@ -1,0 +1,1 @@
+default: -f pretty -f json -o features/support/reports/result-cucumber.json
