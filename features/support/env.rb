@@ -33,11 +33,10 @@ Dotenv.load
 Dotenv.overload(".env.#{ENV['ENV']}")
 
 def load_browser(tags)
-  browser = (ENV['BROWSER'] || 'chrome').capitalize.to_sym
+  browser = (ENV['BROWSER'] || 'chrome').downcase.to_sym
   Capybara.default_driver = Capybara.javascript_driver = browser
   Capybara.current_driver = browser
   puts "BROWSER ENV VAR: #{ENV['BROWSER'].inspect}"
-
 end
 
 BrowserConfig.register_drivers($wait_time)
@@ -64,13 +63,37 @@ end
 #   raise 'Missing ENV[SLACK_API_TOKEN]!' unless config.token
 # end
 
-at_exit do |scenario|
-  end_time = Time.now.to_i
-  $duration = Time.at(end_time - $start_time)
-                  .utc.strftime('%H:%M:%S')
-  if ENV['IS_PARALLEL'] != 'true'
-    generate_report($json_result_cucumber, $report_path, $start_time, $tags_run)
-  end
+# at_exit do |scenario|
+#   end_time = Time.now.to_i
+#   $duration = Time.at(end_time - $start_time)
+#                   .utc.strftime('%H:%M:%S')
+#   if ENV['IS_PARALLEL'] != 'true'
+#     generate_report($json_result_cucumber, $report_path, $start_time, $tags_run)
+#   end
+# end
+
+# if start_time && end_time
+#   duration = (end_time || Time.now) - (start_time || Time.now)
+# else
+#   puts "start_time or end_time is nil"
+# end
+
+Before do
+  @start_time = Time.now
+end
+
+at_exit do
+  end_time = Time.now
+  duration = end_time - @start_time if defined?(@start_time)
+  puts "Total test run duration: #{duration} seconds" if duration
+end
+
+
+After do |scenario|
+  $scenario_count += 1
+  puts "Scenarios run so far: #{$scenario_count}"
+  take_screenshot(scenario) if scenario.failed?
+  Capybara.current_session.driver.quit
 end
 
 if ENV['SPEED']

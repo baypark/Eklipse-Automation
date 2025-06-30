@@ -1,5 +1,9 @@
 require_relative '../page_object/base/page_load'
 require_relative '../helper/other/report_helper'
+# require_relative '../helper/data'
+# require_relative '../helper/data'
+# require_relative '../helper/data'
+
 
 # ------ Before ------ #
 Before do |scenario|
@@ -7,26 +11,31 @@ Before do |scenario|
   @tags = scenario.source_tag_names
   @page = Page.new(@tags)
   load_browser(@tags)
-  set_browser_resolution(@tags)
+  # Maximize if not in mobile or headless mode
+  # unless ENV['MWEB'] == 'true' || ENV['HEADLESS'] == 'true'
+  if ENV['MAXIMIZE'].eql?('yes')
+    Capybara.current_session.driver.browser.manage.window.maximize
+  end
+  # set_browser_resolution(@tags)
 end
 
-Before('@xms') do
-  $xms_token = api_get_user_token_xms
-end
+# Before('@xms') do
+#   $xms_token = api_get_user_token_xms
+# end
 
-Before do |scenario|
-  # initialize data
-  $account_data = AccountData.new
-  $checkout_data = CheckoutData.new
-  $product_data = ProductData.new
-end
+# Before do |scenario|
+#   # initialize data
+#   $account_data = AccountData.new
+#   $checkout_data = CheckoutData.new
+#   $product_data = ProductData.new
+# end
 
 # ------ After ------ #
-After do |scenario|
-  scenario_count(scenario)
-  take_screenshot(scenario) if scenario.failed?
-  Capybara.current_session.driver.quit
-end
+# After do |scenario|
+#   scenario_count(scenario)
+#   take_screenshot(scenario) if scenario.failed?
+#   Capybara.current_session.driver.quit
+# end
 
 After('@shopping.bag or @checkout') do |scenario|
   data = $product_data.get_list_product_data
@@ -79,3 +88,5 @@ end
 AfterConfiguration do |config|
   $tags_run = config.tag_expressions
 end
+
+

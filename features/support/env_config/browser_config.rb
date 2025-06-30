@@ -49,7 +49,7 @@ module BrowserConfig
 
   def self.register_chrome_mweb(wait_time)
     Capybara.register_driver :chrome_mweb do |app|
-      options = Selenium::WebDriver::Chrome::Options.new
+      options = Selenium::WebDriver::chrome::Options.new
       if ENV['HEADLESS'].downcase == 'yes'
         options.add_argument('--headless')
       end
@@ -57,7 +57,7 @@ module BrowserConfig
       options.add_argument('--no-sandbox')
       options.add_argument('--disable-dev-shm-usage')
       options.add_argument('--disable-notifications')
-      options.add_argument('--window-size=411,823')
+      options.add_argument('start-maximized')
       if ENV["PRIVATE"].downcase == 'yes'
         options.add_argument('--headless')
       end
@@ -72,29 +72,75 @@ module BrowserConfig
     end
   end
 
+  def self.register_chrome(wait_time)
+    Capybara.register_driver :chrome do |app|
+      options = Selenium::WebDriver::Chrome::Options.new
+  
+      # Start maximized
+      options.add_argument('--start-maximized')
+  
+      # Headless support
+      if ENV['HEADLESS']&.downcase == 'yes'
+        options.add_argument('--headless')
+        options.add_argument('--disable-gpu')
+        options.add_argument('--window-size=1366,1000') # required for headless
+      end
+  
+      # Incognito / private browsing
+      if ENV['PRIVATE']&.downcase == 'yes'
+        options.add_argument('--incognito')
+      end
+  
+      # Disable notifications and automation flags
+      options.add_argument('--disable-notifications')
+      options.add_argument('--disable-infobars')
+      options.add_argument('--disable-blink-features=AutomationControlled')
+  
+      client = Selenium::WebDriver::Remote::Http::Default.new
+      client.open_timeout = wait_time
+      client.read_timeout = wait_time
+  
+      configure_browser(:chrome, app: app, driver_options: options, wait_time: wait_time)
+    end
+  end
+
   def self.register_firefox(wait_time)
     Capybara.register_driver :firefox do |app|
       profile = Selenium::WebDriver::Firefox::Profile.new
       options = Selenium::WebDriver::Firefox::Options.new
-      if ENV['HEADLESS'].downcase == 'yes'
+  
+      # Headless mode
+    if ENV['HEADLESS']&.downcase == 'yes'
         options.add_argument('--headless')
+        options.add_argument('--width=1366')
+        options.add_argument('--height=1000')
+      else
+        options.add_argument('--start-maximized') # Only works in GUI mode
       end
+  
+      # Firefox-specific preferences to reduce automation detection and notifications
       options.add_preference 'dom.webdriver.enabled', false
       options.add_preference 'dom.webnotifications.enabled', false
       options.add_preference 'dom.push.enabled', false
-      options.add_argument('--width=1366')
-      options.add_argument('--height=1000')
-      if ENV["PRIVATE"].downcase == 'yes'
+  
+      # Private browsing
+      if ENV['PRIVATE']&.downcase == 'yes'
         options.add_argument('-private')
       end
+  
+      # Assign profile
       options.profile = profile
+  
+      # HTTP client config
       client = Selenium::WebDriver::Remote::Http::Default.new
       client.open_timeout = wait_time
       client.read_timeout = wait_time
-
+  
       configure_browser(:firefox, app: app, driver_options: options, wait_time: wait_time)
     end
   end
+  
+  
 
   def self.register_firefox_mweb(wait_time)
     Capybara.register_driver :firefox_mweb do |app|

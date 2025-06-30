@@ -98,3 +98,7 @@ end
 def switch_back_to_original_window
   page.driver.browser.switch_to.window(@original_window)
 end
+
+# def maximize_browser_window
+#   Capybara.current_session.driver.browser.manage.window.maximize
+# end

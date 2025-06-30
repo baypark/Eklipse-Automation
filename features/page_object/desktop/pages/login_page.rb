@@ -5,16 +5,18 @@ class LoginPage < SitePrism::Page
   include BasePage
   include LocatorLoginPage
 
-  config = get_config_data('email')
-  config = get_config_data('password')
-  set_url(config['url'])
+  config_email = get_config_data('email_free_member')
+  config_pass = get_config_data('password_free_member')
+  config_url = get_config_data('url')
+  set_url(config_url)
 
 #object
   element :eklipse_login_input_email, INPUT_EMAIL
   element :eklipse_login_input_password, INPUT_PASSWORD
-  element :eklipse_login_button, BUTTON_LOGIN
+  element :eklipse_login_button, :xpath, BUTTON_LOGIN
   element :eklipse_direct_login_page, :xpath, DIRECT_LOGIN_PAGE
   element :eklipse_login_success, :xpath, HOME_LOGIN
+  element :eklipse_login_failed, :xpath, POP_UP_LOGIN_FAILED
 
 #methods
   def direct_login
@@ -37,5 +39,14 @@ class LoginPage < SitePrism::Page
 
   def validate_login_page
     eklipse_login_success.should be_visible
+  end
+
+def invalid_password(invalidPass)
+  eklipse_login_input_password.set (invalidPass)
+end
+
+  def validate_failed_login
+    wait_in_sec(2)
+    eklipse_login_failed.should be_visible
   end
 end

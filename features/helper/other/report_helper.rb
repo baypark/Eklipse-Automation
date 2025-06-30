@@ -2,10 +2,10 @@ require 'report_builder'
 require 'dotenv/load'
 # require_relative '../../support/slack'
 
-def display_banner
-  file_path = 'config/banner.txt'
-  puts File.read(file_path)
-end
+# def display_banner
+#   file_path = 'config/banner.txt'
+#   puts File.read(file_path)
+# end
 
 # def set_global_params_for_reporting
 #   set_common_global_params

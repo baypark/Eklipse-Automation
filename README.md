@@ -1,4 +1,4 @@
-# catalyst_web_automation
+# eklipse_web_automation
 Software Automation Testing for catalyst using ruby and cucumber
 
 ## How to Setup (Mac)
@@ -22,10 +22,10 @@ Software Automation Testing for catalyst using ruby and cucumber
   source ~/.bash_profile
   ```
 
-5. Install Ruby 2.6.3
+5. Install Ruby 2.7.3
 
   ```
-  rvm install 2.6.3
+  rvm install 2.7.3
   ```
 
 6. Install CMake
@@ -62,7 +62,7 @@ Software Automation Testing for catalyst using ruby and cucumber
 11. Setup Gem
 
   ```
-    rvm use 2.6.3@web-test --create
+    rvm use 2.7.3@web-test --create
     gem install bundler
     bundle install
   ```
