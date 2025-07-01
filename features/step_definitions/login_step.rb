@@ -20,6 +20,7 @@ end
   
 When("User click log in button") do
     @page.eklipse_login_page.click_login_button
+    wait_in_sec(2)
 end
 
 When("User input invalid password {string}") do |invalidPass|

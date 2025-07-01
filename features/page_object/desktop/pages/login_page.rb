@@ -15,7 +15,7 @@ class LoginPage < SitePrism::Page
   element :eklipse_login_input_password, INPUT_PASSWORD
   element :eklipse_login_button, :xpath, BUTTON_LOGIN
   element :eklipse_direct_login_page, :xpath, DIRECT_LOGIN_PAGE
-  element :eklipse_login_success, :xpath, HOME_LOGIN
+  element :eklipse_login_success, :xpath, HOME_USER_LOGIN
   element :eklipse_login_failed, :xpath, POP_UP_LOGIN_FAILED
 
 #methods

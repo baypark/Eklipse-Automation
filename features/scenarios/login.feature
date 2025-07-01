@@ -10,7 +10,7 @@ Scenario: Verify free member can be successfully login at eklipse web platform
     When User click log in button
     Then User verify successfully login to eklipse
 
-@eklipse.login @failed.login
+@eklipse.login @failed.login @freemember
 Scenario: Validate user with invalid account can't login
     Given User access eklipse
     And user direct to login page
