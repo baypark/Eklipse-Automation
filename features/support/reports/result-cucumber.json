@@ -61,7 +61,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 12000
+              "duration": 13000
             }
           },
           {
@@ -70,7 +70,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 18000
+              "duration": 17000
             }
           },
           {
@@ -79,7 +79,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6000
+              "duration": 7000
             }
           },
           {
@@ -91,7 +91,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3886935000
+              "duration": 3441679000
             }
           }
         ],
@@ -105,7 +105,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4906304000
+              "duration": 4587437000
             }
           },
           {
@@ -117,7 +117,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 7416830000
+              "duration": 8063857000
             }
           },
           {
@@ -129,7 +129,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1176498000
+              "duration": 1227253000
             }
           },
           {
@@ -141,7 +141,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1313321000
+              "duration": 1200835000
             }
           },
           {
@@ -153,7 +153,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3375033000
+              "duration": 5368560000
             }
           },
           {
@@ -161,11 +161,11 @@
             "name": "User verify successfully login to eklipse",
             "line": 11,
             "match": {
-              "location": "features/step_definitions/login_step.rb:31"
+              "location": "features/step_definitions/login_step.rb:32"
             },
             "result": {
               "status": "passed",
-              "duration": 2451291000
+              "duration": 50180000
             }
           }
         ],
@@ -179,7 +179,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 934922000
+              "duration": 725009000
             }
           },
           {
@@ -188,175 +188,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 55000
-            }
-          }
-        ]
-      },
-      {
-        "id": "log-in-eklipse-web-platform;validate-user-with-invalid-account-can't-login",
-        "keyword": "Scenario",
-        "name": "Validate user with invalid account can't login",
-        "description": "",
-        "line": 14,
-        "type": "scenario",
-        "tags": [
-          {
-            "name": "@desktop",
-            "line": 1
-          },
-          {
-            "name": "@login",
-            "line": 1
-          },
-          {
-            "name": "@eklipse",
-            "line": 1
-          },
-          {
-            "name": "@eklipse.login",
-            "line": 13
-          },
-          {
-            "name": "@failed.login",
-            "line": 13
-          }
-        ],
-        "before": [
-          {
-            "match": {
-              "location": "capybara-3.36.0/lib/capybara/cucumber.rb:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 15000
-            }
-          },
-          {
-            "match": {
-              "location": "capybara-3.36.0/lib/capybara/cucumber.rb:22"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 44000
-            }
-          },
-          {
-            "match": {
-              "location": "features/support/env.rb:81"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 8000
-            }
-          },
-          {
-            "output": [
-              "BROWSER ENV VAR: \"firefox\""
-            ],
-            "match": {
-              "location": "features/support/hooks.rb:9"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2835167000
-            }
-          }
-        ],
-        "steps": [
-          {
-            "keyword": "Given ",
-            "name": "User access eklipse",
-            "line": 15,
-            "match": {
-              "location": "features/step_definitions/login_step.rb:1"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6028336000
-            }
-          },
-          {
-            "keyword": "And ",
-            "name": "user direct to login page",
-            "line": 16,
-            "match": {
-              "location": "features/step_definitions/login_step.rb:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6835411000
-            }
-          },
-          {
-            "keyword": "And ",
-            "name": "User input email with data \"email_free_member\"",
-            "line": 17,
-            "match": {
-              "location": "features/step_definitions/login_step.rb:9"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1229632000
-            }
-          },
-          {
-            "keyword": "And ",
-            "name": "User input invalid password \"invalid_password\"",
-            "line": 18,
-            "match": {
-              "location": "features/step_definitions/login_step.rb:25"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1173877000
-            }
-          },
-          {
-            "keyword": "When ",
-            "name": "User click log in button",
-            "line": 19,
-            "match": {
-              "location": "features/step_definitions/login_step.rb:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3362120000
-            }
-          },
-          {
-            "keyword": "Then ",
-            "name": "showing validation Login failed",
-            "line": 20,
-            "match": {
-              "location": "features/step_definitions/login_step.rb:35"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2039276000
-            }
-          }
-        ],
-        "after": [
-          {
-            "output": [
-              "Scenarios run so far: 2"
-            ],
-            "match": {
-              "location": "features/support/env.rb:92"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 740947000
-            }
-          },
-          {
-            "match": {
-              "location": "capybara-3.36.0/lib/capybara/cucumber.rb:10"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 66000
+              "duration": 48000
             }
           }
         ]

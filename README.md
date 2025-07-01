@@ -1,5 +1,5 @@
 # eklipse_web_automation
-Software Automation Testing for catalyst using ruby and cucumber
+Software Automation Testing for eklipse using ruby and cucumber
 
 ## How to Setup (Mac)
 
